@@ -1,7 +1,5 @@
-"use client";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 type FromValues = {
@@ -33,7 +31,7 @@ export const SignUp = () => {
     }
   };
 
-  const handleChange = (e: any) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormValue((prev) => ({
       ...prev,
@@ -53,11 +51,17 @@ export const SignUp = () => {
       </div>
       <div className="self-stretch h-9 flex-col justify-start items-start gap-4 flex">
         <div className="self-stretch h-9 flex-col justify-start items-start gap-2 flex">
+          
           <Input
             placeholder="Enter your email address"
             value={formValue.email}
             onChange={handleChange}
+            type="email"
+            name="email"
           />
+          {error.email && (
+            <div className="text-[#ee4444] text-sm font-normal font-['Inter'] leading-tight">{error.email}</div>
+          )}
         </div>
       </div>
       <div className="self-stretch justify-start items-start gap-3 inline-flex">
