@@ -66,7 +66,7 @@ export const LogIn = () => {
   };
   return (
     <div>
-      <div className="w-[416px] h-72 absolute top-[246px] left-[100px] flex-col justify-center items-start gap-6 inline-flex">
+      <div className="w-[416px] h-72 absolute top-[246px] left-[100px] flex-col justify-center items-start gap-6 inline-flex pt-[350px]">
         <div className="self-stretch h-[60px] flex-col justify-start items-start gap-1 flex">
           <div className="text-zinc-950 text-2xl font-semibold font-['Inter'] leading-loose">
             Create your account
